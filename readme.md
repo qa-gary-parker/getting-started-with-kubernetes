@@ -43,19 +43,20 @@ Link: https://kubernetes.io/docs/tasks/tools/install-kubectl/
 
 ### Deploying single container pod
 
-`kubectl cluster-info`
+| Command                | Description                                       |
+|:-----------------------|:--------------------------------------------------|
+| `kubectl cluster-info` | Get information about running Kubernetes clusters |
 
 ![](images/image2.png)
 
-> clone files from getting-started-k8s
-https://github.com/nigelpoulton/getting-started-k8s
+> Clone files from [getting-started-k8s](https://github.com/nigelpoulton/getting-started-k8s) to follow steps below
 
-- CD `Pods` folder
+- Navigate into the `Pods` folder
 
-`kubectl apply -f pod.yml`
-
-`kubectl get pods --watch`
-- status of pods
+| Command                    | Description                    |
+|:---------------------------|:-------------------------------|
+| `kubectl apply -f pod.yml` | Create resource from `pod.yml` |
+| `kubectl get pods --watch` | View pod status                |
 
 ![](images/image3.png)
 
@@ -82,4 +83,16 @@ or
 > nginx is name of pod, or you can use yml file used
 
 ## Kubernetes Services
+
+`kubectl expose pod hello-pod --name=hello-svc --target-port=8080 --type=NodePort`
+
+- expose pod with NodePort service
+
+`kubectl get svc`
+- view services
+
+![](images/image6.png)
+
+> If you're using Docker Desktop, you can view the app. with http://localhost: + the node port - based on the example above, it would be http://localhost:30859/
+
 
