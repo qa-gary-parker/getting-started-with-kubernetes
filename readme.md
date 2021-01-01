@@ -1,5 +1,7 @@
 # Getting Started with Kubernetes
 
+![](images/banner.png)
+
 Documentation based on Pluralsight course [Getting Started with Docker](https://app.pluralsight.com/library/courses/kubernetes-getting-started/)
 
 > Clone the files from the authors [repository](https://github.com/nigelpoulton/getting-started-k8s) to
