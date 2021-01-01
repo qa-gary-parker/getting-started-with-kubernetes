@@ -18,6 +18,8 @@ follow steps below
 
 ### Install [Kubernetes CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
+> There are numerous ways to install the Kubernetes CLI, the options I used were Powershell and Choco - which are detailed below
+
 #### Powershell
 
 ```properties
@@ -86,7 +88,11 @@ Labels:       app=web
 Annotations:  <none>
 Status:       Running
 IP:           10.1.0.18
+...
+...
 ```
+
+> The describe command above was truncated - you will be able to see more verbose information when you execute it
 
 ### Deploying multi-container pod
 
@@ -112,6 +118,7 @@ pod "nginx" deleted
 ### Build Service from Command Line
 
 - Expose `hello-pod` pod with NodePort service
+- View service information
 
 ```properties
 λ kubectl expose pod hello-pod --name=hello-svc --target-port=8080 --type=NodePort
@@ -128,12 +135,13 @@ kubernetes   ClusterIP   10.96.0.1       <none>        443/TCP          2d1h
 ### :post_office: Build Service from YAML file
 
 - Navigate into `Services` folder
+- Create service from `svc-nodeport.yml`
+- View service information
 
 ```properties
 λ kubectl apply -f svc-nodeport.yml
 service/ps-nodeport created
 
-C:\Git\qa-gary-parker\getting-started-with-kubernetes\Services (master -> origin)
 λ kubectl describe svc ps-nodeport
 Name:                     ps-nodeport
 Namespace:                default
