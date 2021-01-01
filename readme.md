@@ -113,7 +113,7 @@ pod "nginx" deleted
 
 - Expose `hello-pod` pod with NodePort service
 
-```properties
+```cmd
 λ kubectl expose pod hello-pod --name=hello-svc --target-port=8080 --type=NodePort
 service/hello-svc exposed
 
@@ -129,7 +129,7 @@ kubernetes   ClusterIP   10.96.0.1       <none>        443/TCP          2d1h
 
 - Navigate into `Services` folder
 
-```properties
+```bash
 λ kubectl apply -f svc-nodeport.yml
 service/ps-nodeport created
 
@@ -153,4 +153,3 @@ Events:                   <none>
 ```
 
 > If you're using Docker Desktop, you can view the app. with <http://localhost>: + the node port - based on the example above, it would be <http://localhost:31111/>
-
