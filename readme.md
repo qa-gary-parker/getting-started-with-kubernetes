@@ -52,9 +52,7 @@ kubectl version --short
 
 ### Deploying single container pod
 
-| Command                | Description                                       |
-|:-----------------------|:--------------------------------------------------|
-| `kubectl cluster-info` | Get information about running Kubernetes clusters |
+- Get information about active Kubernetes cluster
 
 ```properties
 λ kubectl cluster-info
