@@ -1,6 +1,6 @@
 # Getting Started with Kubernetes
 
-![](images/banner.png)
+![banner](images/banner.png)
 
 Documentation based on Pluralsight course [Getting Started with Kubernetes](https://app.pluralsight.com/library/courses/kubernetes-getting-started/)
 
